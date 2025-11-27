@@ -31,7 +31,7 @@ app.post('/', (req, res) => {
 
       const rezultat = (lei / curs).toFixed(2);
       
-      const mesaj = `Calcul Replit: ${lei} Lei înseamnă aproximativ ${rezultat} ${simbol} (la un curs de ${curs}).\n\nDorești să revii la meniul principal sau să oferi feedback?`;
+      const mesaj = `Suma: ${lei} Lei înseamnă aproximativ ${rezultat} ${simbol} (la un curs de ${curs}).\n\nDorești să revii la meniul principal sau să oferi feedback?`;
 
       return res.json({
           fulfillmentText: mesaj,
@@ -52,3 +52,4 @@ app.post('/', (req, res) => {
 app.listen(5000, '0.0.0.0', () => {
   console.log('Serverul a pornit cu succes pe portul 5000! Aștept comenzi...');
 });
+
